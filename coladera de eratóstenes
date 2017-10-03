@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int v[1000];
+
+    for (int i=1;i<1000;i++)
+    {
+       v[i]=1;
+    }
+    for (int i=2;i<1000;i++)
+    {
+        if(v[i]==1)
+        {
+        for (int j=i+1;j<1000;j++)
+        {
+            if(j%i==0)
+            {
+                v[j]=0;
+            }
+        }
+        for (int k=i+2;k<1000;k++)
+        {
+            if (k%i==0)
+            {
+                v[k]=0;
+            }
+        }
+        for (int a=i+3;a<1000;a++)
+        {
+            if (a%i==0)
+            {
+                v[a]=0;
+            }
+        }
+        for (int b=i+4;b<1000;b++)
+        {
+            if (b%i==0)
+            {
+                v[b]=0;
+            }
+        }
+        for (int c=i+5;c<1000;c++)
+        {
+            if (c%i==0)
+            {
+                v[c]=0;
+            }
+        }
+        for (int d=i+6;d<1000;d++)
+        {
+            if (d%i==0)
+            {
+                v[d]=0;
+            }
+        }
+        for (int e=i+7;e<1000;e++)
+        {
+            if (e%i==0)
+            {
+                v[e]=0;
+            }
+        }
+        for (int f=i+8;f<1000;f++)
+        {
+            if (f%i==0)
+            {
+                v[f]=0;
+            }
+        }
+        for (int g=i+9;g<1000;g++)
+        {
+            if (g%i==0)
+            {
+                v[g]=0;
+            }
+        }
+        for (int h=i+10;h<1000;h++)
+        {
+            if (h%i==0)
+            {
+                v[h]=0;
+            }
+        }
+        cout<<i<<"  ";
+    }
+    }
+}
