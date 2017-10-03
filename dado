@@ -1,0 +1,90 @@
+#include <iostream>
+#include <stdlib.h>
+#include <ctime>
+int dado();
+int menu();
+void histograma(int n);
+using namespace std;
+int main()
+{
+int op, n, vd;
+
+srand(time(0));
+
+int x [6]={0};
+int y [11]={0};
+op=menu();
+
+if (op==1)
+{
+    for (int i=0;i<=100;i++)
+    {
+        vd=dado();
+
+        x[vd-1]++;
+        cout<<vd<<" ";
+    }
+    cout<<endl;
+
+    for(int k=0; k<6; k++)
+    {
+        cout<<endl;
+        cout<<"Cara "<<k+1<<": "<<x[k]<<endl;
+        cout<<endl;
+        n=x[k];
+        histograma(n);
+    }
+}
+else if (op==2)
+{
+ for (int i=0;i<=100;i++)
+    {
+        vd=dado()+dado();
+
+        y[vd-2]++;
+        cout<<vd<<" ";
+    }
+    cout<<endl;
+
+    for(int k=0; k<11; k++)
+    {
+        cout<<endl;
+        cout<<"Cara "<<k+2<<": "<<y[k]<<endl;
+        cout<<endl;
+        n=y[k];
+       histograma(n);
+    }
+}
+else
+{
+    cout<<"As Salido"<<endl;
+}
+}
+
+int menu()
+{
+     int op;
+     cout<<"****************** INGRESA CUAL OPCION QUIERES ****************** "<<endl<<endl
+
+         <<"                           0.-SALIR"<<endl<<endl
+         <<"                    1.-Tirar un Dado 100 veces "<<endl<<endl
+         <<"                   2.-Tirar dos Dados 100 veces"<<endl<<endl
+
+         <<"*****************************************************************"<<endl<<endl;
+      cin>>op;
+      cout<<endl;
+return op;
+}
+
+void histograma (int n)
+{
+    for (int b=1;b<=n;b++)
+
+        cout<<"*";
+}
+
+int dado()
+{
+
+    int n=1 +  rand()%6;
+}
